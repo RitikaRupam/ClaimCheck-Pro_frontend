@@ -1,72 +1,322 @@
-# Getting Started with Create React App
+# 🏥 ClaimCheck Pro
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Healthcare Billing Workflow Analytics & Automation Platform
 
-## Available Scripts
+ClaimCheck Pro is a full-stack healthcare claims analytics platform that simulates large-scale claim processing workflows, identifies rejection drivers, tracks operational KPIs, and automates claim validation using rule-based decisioning.
 
-In the project directory, you can run:
+Built using **Java, Spring Boot, MySQL, React, SQL, and CSV-based analytics**, the platform processes and analyzes **100,000+ healthcare claims** to uncover workflow inefficiencies and improve operational performance.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Project Highlights
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+✅ Processed and analyzed **100K+ healthcare claims**
 
-### `npm test`
+✅ Identified **21% data-quality issues** impacting claim acceptance
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+✅ Detected a dominant error contributing to **43% of claim rejections**
 
-### `npm run build`
+✅ Automated validation and decision-making through a rule engine
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+✅ Reduced manual review workload through rule-based processing
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+✅ Generated actionable analytics and KPI dashboards
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📊 Key Features
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Claim Processing Engine
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Claim ingestion and validation
+* Procedure code verification
+* Amount validation
+* Rule-based approval/rejection workflows
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Workflow Analytics
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* Acceptance Rate
+* Rejection Rate
+* Top Rejection Drivers
+* Error Distribution Analysis
+* Workflow Performance Metrics
 
-## Learn More
+### Automation Engine
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Automatic claim approval
+* Automatic claim rejection
+* Review queue assignment
+* Business rule execution
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Dashboard & Visualization
 
-### Code Splitting
+* Interactive KPI cards
+* Rejection reason analysis
+* Error distribution charts
+* Real-time analytics updates
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Database Integration
 
-### Analyzing the Bundle Size
+* MySQL persistence layer
+* SQL-based aggregations
+* Historical claim analysis
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🏗️ System Architecture
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```text
+React Frontend
+      │
+      ▼
+REST APIs
+      │
+      ▼
+Spring Boot Backend
+      │
+      ├── Validation Engine
+      ├── Rule Engine
+      ├── Analytics Engine
+      │
+      ▼
+MySQL Database
+      │
+      ▼
+KPI Dashboard
+```
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📂 Project Structure
 
-### Deployment
+```text
+claimcheck-pro/
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   └── Upload.js
+│   │   ├── pages/
+│   │   │   ├── Dashboard.js
+│   │   │   └── Claims.js
+│   │   ├── api.js
+│   │   └── App.js
+│
+├── backend/
+│   ├── controller/
+│   │   └── ClaimController.java
+│   ├── service/
+│   │   ├── ClaimService.java
+│   │   ├── ValidationService.java
+│   │   └── RuleEngine.java
+│   ├── repository/
+│   │   └── ClaimRepository.java
+│   ├── model/
+│   │   └── Claim.java
+│   ├── util/
+│   │   └── DataGenerator.java
+│   └── resources/
+│       └── application.properties
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 🔄 Application Flow
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Claim Upload
 
-<!-- http://localhost:8080/generate -->
+```text
+User Uploads Claims
+        │
+        ▼
+ClaimController
+        │
+        ▼
+ClaimService
+        │
+        ├── ValidationService
+        ├── RuleEngine
+        │
+        ▼
+MySQL Database
+```
+
+### Analytics Dashboard
+
+```text
+Dashboard Request
+        │
+        ▼
+Analytics API
+        │
+        ▼
+SQL Aggregations
+        │
+        ▼
+KPIs + Charts
+```
+
+---
+
+## 📈 KPIs Tracked
+
+| KPI                | Description                   |
+| ------------------ | ----------------------------- |
+| Acceptance Rate    | Percentage of approved claims |
+| Rejection Rate     | Percentage of rejected claims |
+| Total Claims       | Total processed claims        |
+| Top Error Driver   | Most frequent rejection cause |
+| Error Contribution | Impact of top error category  |
+
+---
+
+## ⚙️ Business Rules
+
+### Validation Rules
+
+* Missing Procedure Code → Reject
+* Invalid Amount → Reject
+* Invalid Procedure Code → Reject
+
+### Review Rules
+
+* High Claim Amount → Manual Review
+
+### Approval Rules
+
+* Valid Claims → Auto Approve
+
+---
+
+## 🗄️ Sample SQL Analytics
+
+### Total Claims
+
+```sql
+SELECT COUNT(*) FROM claim;
+```
+
+### Acceptance Rate
+
+```sql
+SELECT
+COUNT(CASE WHEN status='APPROVED' THEN 1 END) * 100.0 /
+COUNT(*) AS acceptance_rate
+FROM claim;
+```
+
+### Top Rejection Driver
+
+```sql
+SELECT error_code, COUNT(*)
+FROM claim
+GROUP BY error_code
+ORDER BY COUNT(*) DESC;
+```
+
+---
+
+## 🧪 Generate Large Dataset
+
+The platform includes a custom claim generator capable of producing:
+
+* 10K Claims
+* 50K Claims
+* 100K+ Claims
+
+Used for:
+
+* Performance testing
+* Analytics validation
+* Workflow simulation
+
+---
+
+## 🛠️ Tech Stack
+
+### Backend
+
+* Java 17
+* Spring Boot
+* Spring Data JPA
+* Maven
+
+### Frontend
+
+* React.js
+* Axios
+* Recharts
+
+### Database
+
+* MySQL
+
+### Analytics
+
+* SQL
+* CSV Processing
+* KPI Computation
+
+---
+
+## ▶️ Getting Started
+
+### Backend
+
+```bash
+cd backend
+
+mvn clean install
+
+mvn spring-boot:run
+```
+
+Backend runs on:
+
+```text
+http://localhost:8080
+```
+
+---
+
+### Frontend
+
+```bash
+cd frontend
+
+npm install
+
+npm start
+```
+
+Frontend runs on:
+
+```text
+http://localhost:3000
+```
+
+---
+
+## 🎯 Resume Impact
+
+* Built a scalable healthcare claims analytics platform
+* Processed and analyzed 100K+ simulated healthcare claims
+* Designed KPI-driven dashboards for operational insights
+* Implemented SQL-powered analytics and reporting
+* Developed a rule-based automation engine to streamline claim processing
+
+---
+
+## 🚀 Future Enhancements
+
+* JWT Authentication
+* Role-Based Access Control
+* SLA Monitoring Dashboard
+* Excel Export & Reporting
+* Predictive Rejection Analysis
+* Docker Deployment
+* Cloud Hosting (AWS/Azure)
+
+---
+
+### ⭐ If you found this project useful, consider giving it a star!
